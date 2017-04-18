@@ -1,17 +1,17 @@
-# Quick Start
+# 快速开始
 
-## Installation
+## 安装
 
-Make sure [Nodejs v6.5+](https://nodejs.org) has been installed correctly.
+确保已经正确安装 [Nodejs v6.5+](https://nodejs.org)
 
-We recommend that you create and publish your game using our command-line tools:
+我们推荐您使用我们编写的命令行工具创建和发布您的游戏：
 
 ```shell
 npm install -g avg-cli
 avg create mygame
 ```
 
-You will be asked to enter the project name (folder name) and the game name, the final output is similar to:
+之后会要求你输入项目名（文件夹名称）和游戏名，最后的输出类似于：
 
 ```
 $ avg create mygame
@@ -27,7 +27,7 @@ continue? Yes
 [INFO]  Run `cd mygame && npm run dev` to have a quick look.
 ```
 
-## Start Development
+## 启动开发
 
 ```shell
 cd mygame
@@ -40,11 +40,11 @@ npm run dev
 
 每当你修改了文件并按下保存，浏览器中的画面将自动更新或刷新。
 
-## Publish Game
+## 发布游戏
 
 ```shell
 avg publish
 ```
 
-Publishing process will begin automatically. Finally, you can find the full release game in the `./dist` folder. You can upload it to your server or start a local server to play.
+发布流程将自动开始，结束后可在 `./dist` 文件夹找到发布后的完整游戏，你可以将其上传到服务器或启动本地服务器查看。
 

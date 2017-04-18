@@ -1,6 +1,6 @@
 # Image
 
-`<Image>` is one of the basic components of AVG.js, used to display a image.
+`<Image>`是 AVG.js 的基础组件之一，用于显示一个图片。
 
 ```javascript
 import { React, Component, core, components } from 'avg-core';
@@ -17,6 +17,6 @@ class Game extends Component {
 }
 ```
 
-All [standard properties](components-props.md) can be used.
+可使用全部的[标准属性](zh/components-props.md)。
 
-?> The resource specified by `src` can not only be jpg/png/webp, but also be svg.
+?> src 指定的资源不仅可以是 jpg png webp 等图片格式，也可以是矢量格式 svg

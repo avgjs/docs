@@ -1,5 +1,5 @@
-# 功能组件
+# Functional Components
 
-功能组件是复杂功能的组件化封装，他们可能是基础组件的组合，也可能是特殊功能的组件化封装。
+Functional components are component-packages of complex functions that may be a combination of basic components and may also be component-packages of special features.
 
-除了提供 React 组件功能外，部分功能组件还提供[故事脚本（Storyscript）](storyscript.md)的命令功能，在具体的每个组件中会作说明。
+In addition to providing the React component functions, some of the components also provide *command* functions for [Storyscript](storyscript.md), which will be described in each document of these components.

@@ -1,6 +1,6 @@
 # Button
 
-`<Button>`是 AVG.js 的基础组件之一，用于显示一个按钮。
+`<Button>` is one of the interface components of AVG.js, which is used to display a button.
 
 ```javascript
 import { React, Component, core, components, ui } from 'avg-core';
@@ -18,12 +18,12 @@ class Game extends Component {
 }
 ```
 
-可使用全部的[标准属性](components-props.md)。
+All [standard properties](components-props.md) can be used.
 
-此外，还包括：
+In addition, it also includes:
 
-| 名称 | 类型 | 默认值/必须 | 描述 |
+| Name | Type | Default/Needed | Description |
 | :--: | :--: | :--: | :-- |
-| lite | boolean | true | 按钮切分方式，简易切分指将图片分成2部分（通常/移过，移动端为通常/点击），否则分为三部分（通常/移过/点击） |
+| lite | boolean | true | lite means to divided the image into two parts (idle/over), otherwise into three parts (idle/over/clicked) |
 
-?> src 指定的资源不仅可以是 jpg png webp 等图片格式，也可以是矢量格式 svg
+?> The resource specified by `src` can not only be jpg/png/webp, but also be svg.

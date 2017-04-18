@@ -1,5 +1,5 @@
-# 基础组件
+# Basic Components
 
-基础组件是提供单一图形功能的组件，多为 Pixi.js 类或继承自 Pixi.js 类的类的封装。
+Basic components is a single graphical element, mostly a PIXI.DisplayObject or its inheritance.
 
-只能通过 React 属性控制，是低阶的 React 组件。
+Can only be controlled by the React property, which is a low-order React component.

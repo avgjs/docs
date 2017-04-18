@@ -1,44 +1,38 @@
 # Storyscript
 
-## 简介及设计思想
+## Introduction and Design Ideas
 
-Storyscript 是一套用于表达 AVG 剧情的脚本系统，是 AVG.js 的官方模块之一。与其他 AVG 引擎的脚本系统类似，它也是依照文本顺序依次执行；语法上，与 [BKEngine](https://bke.bakery.moe) 的脚本系统颇为类似，但更为简单。
+Storygscript is a scripting system for expressing AVG stories and is one of the official modules of AVG.js. Similar to the scripting system of other AVG engines, it is executed in the order of text; grammatically, it is quite similar to [BKEngine](https://bke.bakery.moe/index_en.html)'s scripting system, but simpler.
 
-以往的 AVG 脚本，包含了整个游戏全部的程序实现，但相对 Lua、Javasciprt 等成熟的程序语言，其类似标记语言的语法却十分简陋，在这个基础上实现程序逻辑无论对程序员还是普通的爱好者都是一份困扰。
+The previous AVG script, including the entire programming logic, but unlike Lua, Javasciprt and other mature programming language, the command-style language grammar is very out of date, using it to writing a game system is often a big trouble.
 
-AVG.js 已经将游戏UI、演出效果等强逻辑内容从 AVG 脚本中剥离，剩下的只有表述剧情的简单指令性代码，这便是 Storyscript 之名的由来。
+AVG.js separates game system programming from script writting, and the rest of script writting is only storytelling, which is the origin of the name Storyscript.
 
-Storyscript 致力于降低学习难度，让非程序员完全能够掌握其使用方法，使策划、剧本、演出师等人员能够自行完成游戏内容的制作，减少不必要的沟通环节。
+Storyscript aims to reduce the difficulty of learning, so that non-programmers can fully grasp their use, so that designers and other personnel can complete the entry of game content on their own and reduce unnecessary communication links.
 
-## 语法简介
+## Syntax
 
-Storyscript 脚本系统分为**内容脚本**和**逻辑脚本**。
+StoryScript consists of **Content Script** and **Logical Script**.
 
-内容脚本：表示游戏剧情的变化，如打印对话、显示立绘、切换背景图片、播放声音等
+Content script: changes in the game plot, such as print dialogue text, display characters, switch the background picture, play sound, etc.
 
-逻辑脚本：控制游戏剧情的走向或提供一些方便的程序功能，如变量赋值、条件分支、循环等
+Logic Script: Controls the direction of the game plot or provides convenient programming logic such as variable assignment, conditional branching, loops, etc.
 
-### 内容脚本
+### Content Script
 
-**基本语法**
+**Basic**
 
 ```shell
 [command flag param="value"]
 ```
 
-command: 指令名，必须在最前<br>
-flag: 标记，可以有多个<br>
-param: 参数，可以有多个
-
-flag 和 param 都不分前后顺序，也可以交错
-
-例如
+For example
 
 ```shell
 [bgm autoplay loop file="abc.ogg" volume=100]
 ```
 
-将被解析为
+Will be parsed as
 
 ```javasciprt
 {
@@ -51,16 +45,16 @@ flag 和 param 都不分前后顺序，也可以交错
 }
 ```
 
-### 逻辑脚本
+### Logical Script
 
-#### 语句
+#### Statement
 
 **LET**
 
 ```
-#let foo = 123  // 标准方式
-#bar = 456      // 可省略 let
-#let foobar     // 可不赋值（值为null），此时 let 不可省略
+#let foo = 123  // standard way
+#bar = 456      // omit let
+#let foobar     // can not assign value (value will be null), thus `let` can not be omitted
 ```
 
 **If**
@@ -75,7 +69,7 @@ flag 和 param 都不分前后顺序，也可以交错
 #end
 ```
 
-其中，`elseif` 和 `else` 都是可选的。
+Among them, `elseif` and`else` are optional.
 
 **While**
 
@@ -85,7 +79,7 @@ flag 和 param 都不分前后顺序，也可以交错
 #end
 ```
 
-暂不支持 `break` 和 `continue`，它们还在 TODO 列表中 : )
+Currently `break` and`continue` are not supported, but they are in TODO list :)
 
 **Foreach**
 
@@ -95,38 +89,40 @@ flag 和 param 都不分前后顺序，也可以交错
 #end
 ```
 
-`children` 是一个数组，这里有一些特殊的情况，请往下阅读。
+`children` is an array, there are some special circumstances, please read on.
 
-#### 变量
+#### Variables
 
-支持简单的变量赋值和修改操作，同时为适应 AVG 游戏的需求，不同的变量在存档时有不同的处理。
+Support for simple variable assignment and modify operations, and to meet the needs of AVG, different variables in the archive have different treatment.
 
-**全局存档变量**
+**Global Archive Variables**
 
-以 `$` 开头的变量将被视为全局存档变量，意思是说，它一旦被赋值将在任何情况下都能被读取，无论是读取了新的档案还是使用以前的档案。你可以用它来控制CG鉴赏的解锁，或是标明周目数。
+Variables that begin with `$` will be treated as global archive variables, meaning that once assigned, they will be read in any case, either by reading a new archive or by using a previous archive. You can use it to control the unlock CG appreciation, or support _New Game+_.
 
 ```
 #let $gameclear = true;
 ```
 
-**单存档变量**
+**Single archive variable**
 
-以 `%` 开头的变量将被视为单存档变量，意思是说，它将只在某些特定的存档中有效，读取其他档案后将被覆盖。通常用来控制路线或好感度。
+Variables that start with `%` are treated as single archive variables, meaning that they will only be valid in certain archives and will be overwritten when other archives are read. Usually used to control the route or favorability.
 
 ```
 #let %girl_favor_num = 1;
 ```
 
-**普通变量**
+**Common variables**
 
-其他情况下的变量名都是普通变量，在存档中，只有存档点所在的「块」及父「块」中的普通变量将被保存（见下）。普通变量仅用于单文件内使用，请勿用于保存好感度等。
+In other cases, the variable name is a normal variable, in the archive, only the archive point where the "block" and the parent "block" common variables will be saved (see below). Common variables are used only for single-file use. Do not use them to save favorability.
 
 ```
 #let x = 0;
 ```
 
-**作用域**
+**Scopes**
 
-全局存档变量和单存档变量在任何位置都有效，故可视为全局变量（注：全局存档变量和全局变量完全没有联系，前者是说其在存档中的保存方式，后者是说其在游戏脚本中何处可以读取）
+Global archive variables and single archive variables are valid at any location, and are therefore considered global variables.
 
-对于普通变量，它的作用域是「块」，如一个 IF 分支中的内容或 While 语句中的内容，均为一个「块」。最大的「块」是「文件」，也就是说，即使你不在 IF While 等语句块中声明变量，而是在它们的外面，变量起作用的范围也仅限于当前的脚本文件。
+(NOTE: The global archive variable is completely unrelated to the global variable, the former is about how it is saved in the archive, while the other is about where it can be access in the game script)
+
+For a normal variable, its scope is "block", such as an IF branch or the contents of the While statement, are a "block." The largest "block" is the "file", that is, even if you do not declare variables such as IF While, but outside of them, variables in the scope of the work is limited to the current script file.

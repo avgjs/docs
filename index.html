@@ -12,11 +12,13 @@
 </body>
 <script>
   window.$docsify = {
-    homepage: 'readme.md',
     loadSidebar: true,
+    loadNavbar: true,
     subMaxLevel: 2,
     name: 'AVG.js',
-    repo: ''
+    repo: '',
+    alias: {
+    }
   }
   if (typeof navigator.serviceWorker !== 'undefined') {
     navigator.serviceWorker.register('sw.js')

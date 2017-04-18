@@ -1,6 +1,6 @@
 # Checkbox
 
-`<Checkbox>`是 AVG.js 的界面组件之一，用于显示一个单选框或复选框。
+`<Checkbox>` is one of the interface components of AVG.js, which is used to display a check box or ratio box.
 
 ```javascript
 import { React, Component, core, components, ui } from 'avg-core';
@@ -22,17 +22,17 @@ class Game extends Component {
 }
 ```
 
-可使用全部的[标准属性](components-props.md)。
+All [standard properties](components-props.md) can be used.
 
-此外，还包括：
+In addition, it also includes:
 
-| 名称 | 类型 | 默认值/必须 | 描述 |
+| Name | Type | Default/Needed | Description |
 | :--: | :--: | :--: | :-- |
-| defaultChecked | boolean | false | 默认是否选中 |
-| value | any | undefined | 回调函数中的值 |
-| onChange | function | - | 选中状态发生改变时触发的回调 |
-| name | string | undefined | 所属的选框组名，若不设置则为多选框，设置后将于相同名称的其他单选框联动 |
+| defaultChecked | boolean | false | default state |
+| value | any | undefined | value passed to callback function |
+| onChange | function | - | callback when state changed |
+| name | string | undefined | group name, if it is not set the component will be a check box, or it will be ratio box |
 
-?> src 指定的资源不仅可以是 jpg png webp 等图片格式，也可以是矢量格式 svg
+?> The resource specified by `src` can not only be jpg/png/webp, but also be svg.
 
-!> 当指定了 name 时，只需对相同 name 的单选框中的其中一个设置 onChange 监听即可
+!> When `name` is specified, you should set `onChange` property on just one of the components in the same group.

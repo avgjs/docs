@@ -1,6 +1,6 @@
 # FGImage
 
-`<FGImage>`是 AVG.js 的功能组件之一，为[故事脚本（Storyscript）](storyscript.md)提供立绘图片显示命令。
+`<FGImage>`is one of functional components of AVG.js, provides character image display command for [Storyscript](storyscript.md).
 
 ```javascript
 import { React, Component, core, components } from 'avg-core';
@@ -17,17 +17,17 @@ class Game extends Component {
 }
 ```
 
-在故事脚本中使用：
+Usage in Storyscript：
 
 ```storyscript
-[fg file="sakura_smile.png"]    //  瞬间切换图片，默认显示在中间
-[fg left/right/center file="sakura_smile.png"]    // 瞬间切换图片，显示在左侧/右侧/中间
-[fg left file="sakura_smile.png" trans]    // 渐变切换图片，显示在左侧
+[fg file="sakura_smile.png"]    //  Instantly change the image, display on the center of the screen by default
+[fg left/right/center file="sakura_smile.png"]    // Instantly change the image, display on the left/right/center
+[fg left file="sakura_smile.png" trans]    // Gradient to change the image, display on the left
 
-[fg clear left/right/center]    // 立刻清除左侧/右侧/中间的立绘
-[fg clear left right trans]    // 渐变地同时清除左侧和右侧的立绘，left/right/center 可以任意组合
+[fg clear left/right/center]    // Instantly clear the left/right/center image
+[fg clear left right trans]    // Gradient to clear the images on the left and right at the same time
 ```
 
-> 渐变功能的详细用法参考[Transition](components-function-transition.md)
+> Detailed usage of the fade function refers to [Transition](components-function-transition.md)
 
-!> 目前必须使用 `width` 和 `height` 指定画面区域，保持与画面尺寸相同即可。后续的版本中该参数将不再需要手工填写。
+!> You must now use `width` and` height` to specify the screen area, usually keep it the same with the screen size. In next version, these properties will no longer be required.

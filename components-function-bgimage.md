@@ -1,6 +1,6 @@
 # BGImage
 
-`<BGImage>`是 AVG.js 的功能组件之一，为[故事脚本（Storyscript）](storyscript.md)提供背景图片显示命令。
+`<BGImage>` is one of functional components of AVG.js, provides background image display command for [Storyscript](storyscript.md).
 
 ```javascript
 import { React, Component, core, components } from 'avg-core';
@@ -17,11 +17,11 @@ class Game extends Component {
 }
 ```
 
-在故事脚本中使用：
+Usage in Storyscript：
 
 ```storyscript
-[bg file="bgimage/h01.png"]    //  瞬间切换图片
-[bg file="bgimage/h01.png" trans]    // 使用渐变效果
+[bg file="bgimage/h01.png"]    //  Instantly change the image
+[bg file="bgimage/h01.png" trans]    // Gradient to change the image
 ```
 
-> 渐变功能的详细用法参考[Transition](components-function-transition.md)
+> Detailed usage of the fade function refers to [Transition](components-function-transition.md)

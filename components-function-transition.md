@@ -1,58 +1,52 @@
-# Transition（渐变/转场）
+# Transition (Gradient Effect)
 
-## 使用渐变
+## Usage
 
-对于已经包含了 Transition 的功能组件，可以在故事脚本中这样使用：
+For functional components that already contain Transition, you can use it in Storyscript like this:
 
 ```storyscript
-[bg file="background.jpg" pretrans]  // 冻结当前画面并执行命令
-[bg file="background.jpg" trans]  // 执行命令并开始渐变动画，默认为 crossfade， 持续时间 1000ms
+[bg file="background.jpg" pretrans]  // Freeze the current component and execute the command
+[bg file="background.jpg" trans]  // Execute the command and start the gradient animation, default effect is `crossfade`, the duration is 1000ms
 
-[bg file="background.jpg" trans method='universal' rule='rule/1.png'] // 使用其他渐变方案
+[bg file="background.jpg" trans method='universal' rule='rule/1.png'] // Use other transition effect
 ```
 
-目前支持的渐变方案及参数：
+Currently supported gradients and parameters:
 
 ### crossfade
 
-交叉淡入淡出
-
-|    名称     |   类型    |    默认值/必须    | 描述
+|    Name     |   Type    |    Default/Needed    | Description
 | :-------: | :-----: | :----------: | :--------------
-|   duration    | number  |      1000      | 持续时间
+|   duration    | number  |      1000      | duration
 
 ### universal
 
-动态遮片
+(aka dynamic mask)
 
-|    名称     |   类型    |    默认值/必须    | 描述
+|    Name     |   Type    |    Default/Needed    | Description
 | :-------: | :-----: | :----------: | :--------------
-|   rule    | string  |      ''      | 遮片文件路径
-|   duration    | number  |      1000      | 持续时间
+|   rule    | string  |      ''      | mask file
+|   duration    | number  |      1000      | duration
 
 ### shutter
 
-百叶窗
-
-|    名称     |   类型    |    默认值/必须    | 描述
+|    Name     |   Type    |    Default/Needed    | Description
 | :-------: | :-----: | :----------: | :--------------
-|   direction    | string  |      'left'      | 方向
-|   num    | number  |      16      | 窗叶数
-|   duration    | number  |      1000      | 持续时间
+|   direction    | string  |      'left'      | direction
+|   num    | number  |      16      | number of blinds
+|   duration    | number  |      1000      | duration
 
 ### ripple
 
-波纹
-
-|    名称     |   类型    |    默认值/必须    | 描述
+|    Name     |   Type    |    Default/Needed    | Description
 | :-------: | :-----: | :----------: | :--------------
-|   origin    | array<number>  |      [0.5, 0.5]      | 起点
-|   speed    | number  |      1      | 速度
-|   count    | array<number>  |     [10, 10]     | 波峰数量
-|   maxDrift    | number  |      24      | 最大漂移
-|   duration    | number  |      1000      | 持续时间
+|   origin    | array<number>  |      [0.5, 0.5]      | origin point
+|   speed    | number  |      1      | speed of ripple
+|   count    | array<number>  |     [10, 10]     | number of crests
+|   maxDrift    | number  |      24      | max drift
+|   duration    | number  |      1000      | duration
 
 
-## 为自定义组件添加渐变功能
+## Add gradient effect to custom components
 
-待续
+To be continued...

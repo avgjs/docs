@@ -1,8 +1,8 @@
 # 事件处理
 
-AVG.js provides a standard bubbling event model for the component.
+AVG.js 为组件提供了标准的冒泡事件模型。
 
-Support events：
+支持的事件：
 
 ```
 click

@@ -1,6 +1,6 @@
 # Layout
 
-`<Layout>`是 AVG.js 的界面组件之一，提供简单的水平/垂直布局功能。
+`<Layout>` is one of the interface components of AVG.js, which provides simple horizental/vertical layout.
 
 ```javascript
 import { React, Component, core, components, ui } from 'avg-core';
@@ -26,31 +26,31 @@ class Game extends Component {
 }
 ```
 
-可使用全部的[标准属性](components-props.md)。
+All [standard properties](components-props.md) can be used.
 
-此外，还包括：
+In addition, it also includes:
 
-| 名称 | 类型 | 默认值/必须 | 描述 |
+| Name | Type | Default/Needed | Description |
 | :--: | :--: | :--: | :-- |
-| clip | boolean | false | 是否剪裁 |
-| padding | array<number> | [0, 0, 0, 0] | 内边距 |
-| direction | string | 'vertical' | 排列方向，可选：vertical/horizental |
-| baseline | number | 0 | 基线对齐位置，取值0-1，指“每个子组件的x位置对齐为一线” |
-| interval | number | 0 | 每个子组件的间隔 |
-| maxWidth | number | Infinity | 最大宽度 |
-| maxHeight | number | Infinity | 最大高度 |
-| overflowX | string | 'scroll' | 横向溢出时的处理方式，可选：scroll/hidden |
-| overflowY | string | 'scroll' | 纵向溢出时的处理方式，可选：scroll/hidden |
-| scrollerOffsetX | number | 0 | 滚动条位置X偏移 |
-| scrollerOffsetY | number | 0 | 滚动条位置Y偏移 |
-| onScroll | function | - | 滚动发生时的回调 |
-| vertical | number | - | 垂直滚动条位置 |
-| horizental | number | - | 水平滚动条位置 |
-| scrollStyle | object | - | 滚动条样式 |
+| clip | boolean | false | whether cut out the content beyond layer |
+| padding | array<number> | [0, 0, 0, 0] | - |
+| direction | string | 'vertical' | arrange direction, value is `vertical` or `horizental` |
+| baseline | number | 0 | baseline alignment position, 0~1, means *the <baseline> position of each subcomponent is aligned as a line* |
+| interval | number | 0 | the interval between subcomponents |
+| maxWidth | number | Infinity | - |
+| maxHeight | number | Infinity | - |
+| overflowX | string | 'scroll' | `scroll` or `hidden` |
+| overflowY | string | 'scroll' | `scroll` or `hidden` |
+| scrollerOffsetX | number | 0 | offset x of scroller |
+| scrollerOffsetY | number | 0 | offset y of scroller |
+| onScroll | function | - | callback when scrolling |
+| vertical | number | - | force the position of vertical scroller |
+| horizental | number | - | force the position of horizental scroller |
+| scrollStyle | object | - | scroll's style |
 
-!> vertical/horizental 必须与 onScroll 配合使用，即受控组件
+!> vertical/horizontal must be used with onScroll, aka the controlled component
 
-> scrollStyle 示例
+> scrollStyle example
 ```json
 {
   backgroundColor: 0x777777,

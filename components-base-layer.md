@@ -1,6 +1,6 @@
 # Layer
 
-`<Layer>`是 AVG.js 的基础组件之一，用于表示一个固定宽高的「层」。
+`<Layer>`is one of the basic components of AVG.js, used to represent a *layer* which has width and height.
 
 ```javascript
 import { React, Component, core, components } from 'avg-core';
@@ -19,17 +19,17 @@ class Game extends Component {
 }
 ```
 
-可使用全部的[标准属性](components-props.md)。
+All [standard properties](components-props.md) can be used.
 
-此外，还包括：
+In addition, it also includes:
 
-| 名称 | 类型 | 默认值/必须 | 描述 |
+| Name | Type | Default/Needed | Description |
 | :--: | :--: | :--: | :-- |
-| width | number | surface width | 层的宽度，默认为画面宽度 |
-| height | number | surface width | 层的高度，默认为画面高度 |
-| fillColor | number | 0x0 | 背景颜色 |
-| fillAlpha | number | 0 | 背景透明度 |
-| clip | boolean | false | 是否根据高宽剪裁掉超出的内容 |
+| width | number | screen width | width of layer, default to screen width |
+| height | number | screen height | height of layer, default to screen height |
+| fillColor | number | 0x0 | background color |
+| fillAlpha | number | 0 | background alpha |
+| clip | boolean | false | whether cut out the content beyond width/height |
 
-!> clip 设置成 true 后会降低界面刷新的性能，如无必要请保持为 false
+!> Rendering performance will drop when clip is set to true, so keep it false if unnecessary.
 
