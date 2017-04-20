@@ -67,6 +67,12 @@ We hope to receive donation/sponsorship for the continuation of the project. The
 
 If you wish to donate/sponsor, please contact Icemic(#)bakery.moe
 
+Or donate to Alipay or Paypal (Please attach your name)
+
+<a href='https://ko-fi.com/A742BTX' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+<img height='142' style='border:0px;height:142px;' src='https://cloud.githubusercontent.com/assets/837432/19645521/a71da460-9a27-11e6-9605-aed9e251dd7a.png' border='0' alt='Alipay QRCode' />
+
 ## License
 
 If not otherwise stated  

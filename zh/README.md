@@ -69,6 +69,11 @@ avg create mygame
 
 若有意捐助/赞助，请联系 Icemic(#)bakery.moe
 
+或直接向支付宝或 Paypal 捐助（请附上您的称呼，以便添加到捐助者名单）
+
+<a href='https://ko-fi.com/A742BTX' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+<img height='142' style='border:0px;height:142px;' src='https://cloud.githubusercontent.com/assets/837432/19645521/a71da460-9a27-11e6-9605-aed9e251dd7a.png' border='0' alt='支付宝二维码' />
 
 ## License
 
