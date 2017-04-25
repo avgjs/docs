@@ -73,6 +73,10 @@ Or donate to Alipay or Paypal (Please attach your name)
 
 <img height='142' style='border:0px;height:142px;' src='https://cloud.githubusercontent.com/assets/837432/19645521/a71da460-9a27-11e6-9605-aed9e251dd7a.png' border='0' alt='Alipay QRCode' />
 
+## Sponsors
+
+<a href="http://www.sujitech.com/" target="_blank"><img height='42' style='border:0px;height:42px;' src='https://cloud.githubusercontent.com/assets/837432/25371554/f19d25b6-29c3-11e7-996b-ea05e7e59382.png' border='0' alt='Suji Tech' /></a>
+
 ## License
 
 If not otherwise stated  
